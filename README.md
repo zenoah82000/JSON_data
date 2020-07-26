@@ -25,5 +25,5 @@
 啟動方式
 1. 安裝XAMPP:https://www.apachefriends.org/index.html
 2. 下載檔案，將資料夾(JSON_data)放於XAMPP安裝目錄下(預設C:\xampp\htdocs\)
-3. 啟動XAMPP
+3. 將XAMPP中Apache以及MySQL啟動(start)
 4. 進入檔案位址:http://localhost/JSON_data/
