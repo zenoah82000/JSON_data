@@ -6,7 +6,7 @@
 
 ## ajax
 1. 透過第三方cors-anywhere重新架構API連結
-2. 利用ajax，撈取實體test.json檔案資料
+2. 透過ajax，撈取API資料
 3. 透過jQuery each迴圈將資料一筆筆帶入指定位置顯示
 4. flex區塊顯示
 
