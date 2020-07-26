@@ -3,18 +3,20 @@
 <html>
     <head>
     <link rel=stylesheet type="text/css" href="index.scss">
-    <title>讀取實體json檔案資料</title>
+    <title>讀取json檔案資料</title>
         
     </head>
     <body>
-        <h1 style="text-align:center">實體json檔讀取實作</h1>
+        <h1 style="text-align:center">json API讀取實作</h1>
         <br>
-        <p style="text-align:center">json檔位置:<a href="./test.json" target="_blank">點我</a></p>
+        <p style="text-align:center">實體json檔位置:<a href="./test.json" target="_blank">點我</a></p>
+        <p style="text-align:center">網路json API位置:<a href="https://zenoah82000.000webhostapp.com/test.json" target="_blank">點我</a><br/>(需搭配第三方cors-anywhere)</p>
         
     <br>
-        <h3>使用ajax撈取json資料</h3>  
+        <h3>使用ajax讀取網路json API資料</h3>  
         <ol>
-            <li>透過ajax，撈取實體test.json檔案資料</li>
+            <li>透過第三方cors-anywhere重新架構API連結</li>
+            <li>透過ajax，撈取API資料</li>
             <li>透過jQuery each迴圈將資料一筆筆帶入指定位置顯示</li>
             <li>flex區塊顯示</li>
         </ol>  
@@ -24,7 +26,7 @@
         </div>
         <hr><br>
 
-        <h3>使用fetch撈取json資料</h3>     
+        <h3>使用fetch讀取實體json資料</h3>     
         <ol>
             <li>透過fetch，撈取實體test.json檔案資料</li>
             <li>透過map將資料一筆筆帶出建立顯示樣式</li>
@@ -38,7 +40,7 @@
         <hr><br>
 
 
-        <h3>使用Request撈取json資料</h3>       
+        <h3>使用Request讀取實體json資料</h3>       
         <ol>
             <li>建立async函式，透過new Request，撈取實體test.json檔案資料</li>
             <li>透過await fetch將資料帶出</li>
@@ -74,7 +76,8 @@
 
             $("#ajaxButton").click(function(item) { //ID 為 ajaxButton 的按鈕被點擊時
                 $.ajax({
-                    url: "test.json", //傳送目的地
+                    // url: "test.json", 
+                    url: "https://cors-anywhere.herokuapp.com/https://zenoah82000.000webhostapp.com/test.json", //傳送目的地
                     type: "GET", //傳送方式
                     dataType: "json", //資料格式
                     data: { //傳送資料
